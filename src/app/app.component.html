@@ -11,30 +11,29 @@
     (keyup.enter)="addItem(newItem.value); newItem.value = ''"
     class="lg-text-input"
     id="addItemInput" />
-<br />
-  <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+  <button class="btn-primary" (click)="addItem(newItem.value)">+</button>
 
   <div class="btn-wrapper">
-      <button
+      <div
         class="btn btn-menu"
         [class.active]="filter == 'all'"
         (click)="filter = 'all'">
         All
-      </button>
+      </div>
 
-      <button
+      <div
         class="btn btn-menu"
         [class.active]="filter == 'active'"
         (click)="filter = 'active'">
-        To Do
-      </button>
+        Pending
+      </div>
 
-      <button
+      <div
         class="btn btn-menu"
         [class.active]="filter == 'done'"
         (click)="filter = 'done'">
         Done
-      </button>
+      </div>
     </div>
 
   <h2>{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>

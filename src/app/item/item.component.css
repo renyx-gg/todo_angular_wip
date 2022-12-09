@@ -1,61 +1,78 @@
 .item {
-  padding: 0.5rem 0 0.75rem 0;
+  padding: 10px;
+  margin: 10px;
   text-align: left;
   font-size: 1.2rem;
+  background-color: #eeeeee;
+  border-radius: 7px;
 }
 
 .btn-wrapper {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  float: right;
+  background-color: #eeeeee;
+  display: inline-flex;
+  margin-right: 0px;
 }
 
 .btn {
   /* menu buttons flexbox styles */
   flex-basis: 49%;
+  padding: 3px 10px;
 }
 
-.btn-save {
-  background-color: #000;
+.btn-edit {
+  float: right;
+  background-color: #999999;
+  margin-left: 10px;
   color: #fff;
-  border-color: #000;
+  border: none;
+  border-radius: 4px;
 }
 
-.btn-save:hover {
-  background-color: #444242;
-}
-
-.btn-save:focus {
-  background-color: #fff;
-  color: #000;
+.btn-edit:hover {
+  color: #fff;
+  background-color: #555555;
 }
 
 .checkbox-wrapper {
-  margin: 0.5rem 0;
+  margin: 10px;
 }
 
 .btn-warn {
-  background-color: #b90000;
+  float: right;
+  background-color: #9a0000;
+  margin-left: 10px;
   color: #fff;
-  border-color: #9a0000;
+  border: none;
+  border-radius: 4px;
 }
 
 .btn-warn:hover {
-  background-color: #9a0000;
+  background-color: orange;
 }
 
-.btn-warn:active {
-  background-color: #e30000;
-  border-color: #000;
+.btn-save {
+  float: right;
+  background-color: orange;
+  margin-left: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-save:hover {
+  background-color: green;
 }
 
 .sm-text-input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 2px solid #555;
-  display: block;
+  display: inline-flex;
+  width: 60%;
+  padding: 10px;
+  border: 1px solid orange;
   box-sizing: border-box;
   font-size: 1rem;
-  margin: 1rem 0;
+  margin: 10px;
+  outline: none;
 }
 
 /* Custom checkboxes
@@ -65,12 +82,11 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
-  left: -9999px;
 }
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
   position: relative;
-  padding-left: 1.95em;
+  padding-left: 40px;
   cursor: pointer;
 }
 
@@ -81,8 +97,8 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   position: absolute;
   left: 0;
   top: 0;
-  width: 1.25em;
-  height: 1.25em;
+  width: 20px;
+  height: 20px;
   border: 2px solid #ccc;
   background: #fff;
 }
@@ -90,28 +106,21 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: "\2713\0020";
+  content: "\2713";
   position: absolute;
-  top: 0.15em;
-  left: 0.22em;
-  font-size: 1.3em;
+  top: 2px;
+  left: 3px;
+    font-size: 25px;
   line-height: 0.8;
-  color: #0d8dee;
-  transition: all 0.2s;
-  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+  color: orange;
+  transition: all 0.5s;
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
-  transform: scale(0);
+  transform: scale(100%);
 }
 [type="checkbox"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
-}
-
-/* accessibility */
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
-  border: 2px dotted blue;
 }
